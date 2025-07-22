@@ -33,7 +33,7 @@ def extract_from_pdf(file_path: Path) -> list[types.ConditionAndDrug]:
 
     mime_type = mimetypes.guess_type(file_path)[0] or "application/pdf"
     baml_pdf = Pdf.from_base64(mime_type, base64_str)
-    result = b.ExtractFromImage(baml_pdf)
+    result = b.ExtractFromPdf(baml_pdf)
     return result
 
 
@@ -45,7 +45,7 @@ def extract_from_bytes(
 
     base64_str = base64.b64encode(pdf_bytes).decode()
     baml_pdf = Pdf.from_base64(mime_type, base64_str)
-    result = b.ExtractFromImage(baml_pdf)
+    result = b.ExtractFromPdf(baml_pdf)
     return result
 
 
