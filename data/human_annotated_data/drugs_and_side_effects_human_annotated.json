@@ -1,5 +1,237 @@
 [
     {
+        "condition": "Pain Relief",
+        "drug": [
+            {
+                "generic_name": "Acetaminophen",
+                "brand_names": [
+                    "Tylenol"
+                ]
+            },
+            {
+                "generic_name": "Hydrocodone/Acetaminophen",
+                "brand_names": [
+                    "Vicodin",
+                    "Lortab",
+                    "Norco"
+                ]
+            },
+            {
+                "generic_name": "Hydromorphone",
+                "brand_names": [
+                    "Dilaudid"
+                ]
+            },
+            {
+                "generic_name": "Morphine",
+                "brand_names": []
+            },
+            {
+                "generic_name": "Oxycodone/Acetaminophen",
+                "brand_names": [
+                    "Percocet"
+                ]
+            },
+            {
+                "generic_name": "Oxycodone",
+                "brand_names": []
+            },
+            {
+                "generic_name": "Tramadol",
+                "brand_names": [
+                    "Ultram"
+                ]
+            }
+        ],
+        "side_effects": [
+            "Confusion",
+            "Constipation",
+            "Dizziness",
+            "Drowsiness",
+            "Dry mouth",
+            "Queasiness",
+            "Rash",
+            "Throwing up"
+        ]
+    },
+    {
+        "condition": "Queasiness or Throwing Up",
+        "drug": [
+            {
+                "generic_name": "Ondansetron",
+                "brand_names": [
+                    "Zofran"
+                ]
+            },
+            {
+                "generic_name": "Promethazine",
+                "brand_names": [
+                    "Phenergan"
+                ]
+            },
+            {
+                "generic_name": "Scopolamine",
+                "brand_names": []
+            }
+        ],
+        "side_effects": [
+            "Constipation",
+            "Drowsiness",
+            "Dizziness",
+            "Fatigue",
+            "Headache"
+        ]
+    },
+    {
+        "condition": "Heartburn or Reflux",
+        "drug": [
+            {
+                "generic_name": "Calcium Carbonate",
+                "brand_names": [
+                    "Tums"
+                ]
+            },
+            {
+                "generic_name": "Esomeprazole",
+                "brand_names": [
+                    "Nexium"
+                ]
+            },
+            {
+                "generic_name": "Famotidine",
+                "brand_names": [
+                    "Pepcid"
+                ]
+            },
+            {
+                "generic_name": "Lansoprazole",
+                "brand_names": [
+                    "Prevacid"
+                ]
+            },
+            {
+                "generic_name": "Omeprazole",
+                "brand_names": [
+                    "Prilosec"
+                ]
+            },
+            {
+                "generic_name": "Pantoprazole",
+                "brand_names": [
+                    "Protonix"
+                ]
+            },
+            {
+                "generic_name": "Ranitidine",
+                "brand_names": [
+                    "Zantac"
+                ]
+            }
+        ],
+        "side_effects": [
+            "Constipation",
+            "Diarrhea",
+            "Headache",
+            "Throwing up",
+            "Upset stomach"
+        ]
+    },
+    {
+        "condition": "Lowers Cholesterol",
+        "drug": [
+            {
+                "generic_name": "Atorvastatin",
+                "brand_names": [
+                    "Lipitor"
+                ]
+            },
+            {
+                "generic_name": "Ezetimibe/Simvastatin",
+                "brand_names": [
+                    "Vytorin"
+                ]
+            },
+            {
+                "generic_name": "Pravastatin",
+                "brand_names": [
+                    "Pravachol"
+                ]
+            },
+            {
+                "generic_name": "Rosuvastatin",
+                "brand_names": [
+                    "Crestor"
+                ]
+            },
+            {
+                "generic_name": "Simvastatin",
+                "brand_names": [
+                    "Zocor"
+                ]
+            }
+        ],
+        "side_effects": [
+            "Headache",
+            "Muscle pain",
+            "Upset stomach"
+        ]
+    },
+    {
+        "condition": "Blood Thinner/Blood Clot Treatment",
+        "drug": [
+            {
+                "generic_name": "Apixaban",
+                "brand_names": [
+                    "Eliquis"
+                ]
+            },
+            {
+                "generic_name": "Aspirin",
+                "brand_names": []
+            },
+            {
+                "generic_name": "Clopidogrel",
+                "brand_names": [
+                    "Plavix"
+                ]
+            },
+            {
+                "generic_name": "Enoxaparin",
+                "brand_names": [
+                    "Lovenox"
+                ]
+            },
+            {
+                "generic_name": "Fondaparinux",
+                "brand_names": [
+                    "Arixtra"
+                ]
+            },
+            {
+                "generic_name": "Heparin",
+                "brand_names": []
+            },
+            {
+                "generic_name": "Rivaroxaban",
+                "brand_names": [
+                    "Xarelto"
+                ]
+            },
+            {
+                "generic_name": "Warfarin",
+                "brand_names": [
+                    "Coumadin"
+                ]
+            }
+        ],
+        "side_effects": [
+            "Blood in stool or urine",
+            "Bruising",
+            "Risk of bleeding",
+            "Upset stomach"
+        ]
+    },
+    {
         "condition": "Heart Rhythm Problems",
         "drug": [
             {

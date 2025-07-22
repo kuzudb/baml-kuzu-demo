@@ -1,9 +1,10 @@
 services:
   explorer:
-    image: kuzudb/explorer:0.10.0
+    image: kuzudb/explorer:0.11.0
     environment:
       - MODE=READ_ONLY
+      - KUZU_FILE="ex.kuzu"
     ports:
       - 8000:8000
     volumes:
-      - ./ex_kuzu_db:/database
+      - ./:/database

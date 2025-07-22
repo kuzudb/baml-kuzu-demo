@@ -10,8 +10,8 @@ class ConditionAndDrug {
     side_effects string[]
 }
 
-function ExtractFromImage(img: image) -> ConditionAndDrug[] {
-  client OpenRouterGPT4oMini
+function ExtractFromPdf(img: pdf) -> ConditionAndDrug[] {
+  client OpenRouterGPT41
   prompt #"
     You are an expert at extracting healthcare and pharmaceutical information.
 
@@ -27,20 +27,11 @@ function ExtractFromImage(img: image) -> ConditionAndDrug[] {
   "#
 }
 
-test TestOne {
-  functions [ExtractFromImage]
+test ExtractFromPDF {
+  functions [ExtractFromPdf]
   args {
     img {
-      file "../../data/img/drugs_1.png"
-    }
-  }
-}
-
-test TestTwo {
-  functions [ExtractFromImage]
-  args {
-    img {
-      file "../../data/img/drugs_2.png"
+      file "../../data/pdf/drugs_and_side_effects.pdf"
     }
   }
 }

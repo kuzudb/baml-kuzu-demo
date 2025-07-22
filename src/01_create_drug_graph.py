@@ -1,4 +1,3 @@
-import shutil
 from pathlib import Path
 from typing import List
 
@@ -213,8 +212,8 @@ def main(data_path: str, conn: kuzu.Connection) -> None:
 
 
 if __name__ == "__main__":
-    DB_NAME = "ex_kuzu_db"
-    shutil.rmtree(DB_NAME, ignore_errors=True)
+    DB_NAME = "ex.kuzu"
+    Path(DB_NAME).unlink(missing_ok=True)
 
     db = kuzu.Database(DB_NAME)
     conn = kuzu.Connection(db)

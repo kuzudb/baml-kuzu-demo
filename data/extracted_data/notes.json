@@ -5,7 +5,7 @@
             "name": "Ramipril",
             "date": "2024-10-12",
             "dosage": "5mg",
-            "frequency": "daily"
+            "frequency": "PO daily"
         },
         "side_effects": [
             "dry cough",
@@ -18,7 +18,7 @@
             "name": "Lansoprazole",
             "date": "2024-11-03",
             "dosage": "30mg",
-            "frequency": "daily"
+            "frequency": "PO daily before breakfast"
         },
         "side_effects": [
             "constipation",
@@ -31,7 +31,7 @@
             "name": "Oxycontin",
             "date": "2025-01-06",
             "dosage": "10mg",
-            "frequency": "q12h"
+            "frequency": "PO q12h"
         },
         "side_effects": [
             "drowsiness",

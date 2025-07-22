@@ -179,16 +179,23 @@ def evaluate_extraction(human_path: str, extracted_path: str) -> Dict[str, Any]:
 
 
 def run_evaluation(
-    human_dir: Path = Path("../../data/human_annotated_data"),
-    extracted_dir: Path = Path("../../data/extracted_data"),
+    human_dir: Path = Path("data/human_annotated_data"),
+    extracted_dir: Path = Path("data/extracted_data"),
 ) -> Dict[str, Dict[str, Any]]:
     """Run evaluation on all matching files in human_annotated_data and extracted_data."""
     results = {}
 
     # Find all JSON files with the prefix "drugs" in human_annotated_data
-    for human_file in human_dir.glob("drugs*.json"):
+    for human_file in human_dir.glob("drugs_and_side_effects*.json"):
         filename = human_file.name
-        extracted_file = extracted_dir / filename
+        
+        # Map human annotated filename to extracted filename
+        if filename.endswith("_human_annotated.json"):
+            extracted_filename = filename.replace("_human_annotated.json", ".json")
+        else:
+            extracted_filename = filename
+            
+        extracted_file = extracted_dir / extracted_filename
 
         # Check if corresponding file exists in extracted_data
         if extracted_file.exists():
@@ -253,6 +260,10 @@ def main() -> Dict[str, Dict[str, Any]]:
     print("Evaluation results:")
     print("===================")
 
+    if not results:
+        print("No files found to evaluate. Check that the data directories exist and contain matching files.")
+        return results
+
     for filename, metrics in results.items():
         total = metrics["exact_match"] + metrics["missing"] + metrics["potential_hallucination"] + metrics["mismatch"]
         print(f"\nFile: {filename}")
@@ -269,6 +280,10 @@ def main() -> Dict[str, Dict[str, Any]]:
             totals[metric] += metrics[metric]
     
     grand_total = sum(totals[metric] for metric in count_metrics)
+    
+    if grand_total == 0:
+        print("\nNo data found to evaluate.")
+        return results
     
     print("\nTotals across all files:")
     print(f"  Total exact matches: {totals['exact_match']} ({totals['exact_match']/grand_total:.1%})")

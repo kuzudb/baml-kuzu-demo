@@ -5,11 +5,10 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 # Import directly from src package
-from baml_client import b, reset_baml_env_vars, types
+from baml_client import b, types
 
 load_dotenv()
 os.environ["BAML_LOG"] = "WARN"
-reset_baml_env_vars(dict(os.environ))
 
 
 def extract_notes(notes: str) -> list[types.PatientInfo]:
